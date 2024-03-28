@@ -36,7 +36,7 @@ public class LoginPomClass extends BaseClass{
 
 	public String getPassword() {
 		String Original = getPassword.getText();
-		String password = Original.substring(Original.indexOf("a"));
+		String password = Original.substring(Original.lastIndexOf("a"));
 		return password;
 	}
 

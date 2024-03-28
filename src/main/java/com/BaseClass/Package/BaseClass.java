@@ -17,10 +17,10 @@ public class BaseClass {
 		
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		driver.manage().deleteAllCookies();
+//		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		
-		Utility.implicitWait(5);
+		Utility.implicitWait(10);
 //		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));
 	}
 	

@@ -1,5 +1,7 @@
 package com.TestClass.Package;
 
+import java.io.IOException;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -32,17 +34,20 @@ public class LoginModulTest extends BaseClass {
 	}
 
 	@Test
-	public void LoginTest() {
+	public void LoginTest() throws IOException {
 
 		LoginPomClass loginpomclass = new LoginPomClass();
 		String username = loginpomclass.getUName();
 		String password = loginpomclass.getPassword();
 
-		Utility.implicitWait(5);
-
+	
 		loginpomclass.setUserName(username);
 		loginpomclass.setPassword(password);
 		loginpomclass.clickLogin();
+
+		Utility.implicitWait(10);
+
+		Utility.takeScreenshot("LoginModule");
 
 	}
 }
