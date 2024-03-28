@@ -51,9 +51,10 @@ public class LoginPomClass extends BaseClass{
 //		setPassword.sendKeys(password);
 	}
 
-	public void clickLogin() {
+	public PIMModulePOM clickLogin() {
 		Utility.userClick(buttonLogin);
-
+		
+		return new PIMModulePOM();
 //		buttonLogin.click();
 	}
 }
