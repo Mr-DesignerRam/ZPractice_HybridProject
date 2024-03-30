@@ -22,4 +22,14 @@ public class PIMModulePOM extends BaseClass {
 		Utility.userClick(PIMButton);
 	}
 	
+	
+	@FindBy(xpath="//button[text()=' Add ']")
+	private WebElement addButton;
+	
+	
+	public AddPIMSubModulePOM clickAdd() {
+		 Utility.userClick(addButton);
+		 return new AddPIMSubModulePOM();
+		 
+	}
 }

@@ -8,11 +8,14 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import com.BaseClass.Package.BaseClass;
+import com.POMClass.Package.AddPIMSubModulePOM;
 import com.POMClass.Package.LoginPomClass;
 import com.POMClass.Package.PIMModulePOM;
 import com.Util.Package.Utility;
 
-public class PIMModuleTest extends BaseClass {
+public class AddPIMSubModTest {
+
+	
 	@BeforeClass
 	public void setup() {
 		BaseClass.launchWebsite();
@@ -23,10 +26,13 @@ public class PIMModuleTest extends BaseClass {
 //	driver.close();
 	}
 
-@Test
-	public void PIMModuleTest() throws IOException {
-	
-		SoftAssert assert1 = new SoftAssert();
+	@Test
+	public void PIMSubModTest() throws IOException {
+		
+		// Ha code Multiple time use krav lagel tya sathi kai krav
+		
+		
+//		SoftAssert assert1 = new SoftAssert();
 		LoginPomClass loginpomclass = new LoginPomClass();
 
 		loginpomclass.setUserName( loginpomclass.getUName());
@@ -35,6 +41,12 @@ public class PIMModuleTest extends BaseClass {
 		PIMModulePOM PIMmodulepom = loginpomclass.clickLogin();
 		PIMmodulepom.clickPIMModule();
 
-		PIMmodulepom.clickAdd();
-}
+		AddPIMSubModulePOM addPIM = PIMmodulepom.clickAdd();
+		addPIM.first_Name();
+		
+		Utility.takeScreenshot("AllData");
+		
+		
+	}
+	
 }

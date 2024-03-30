@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.TestClass.Package.PIMModuleTest">
+      <class name="com.TestClass.Package.AddPIMSubModTest">
         <methods>
-          <include name="PIMModuleTest"/>
-          <include name="teardown"/>
+          <include name="PIMSubModTest"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.TestClass.Package.PIMModuleTest -->
+      </class> <!-- com.TestClass.Package.AddPIMSubModTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

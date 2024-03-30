@@ -9,8 +9,10 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.testng.asserts.SoftAssert;
 
 import com.BaseClass.Package.BaseClass;
+import com.POMClass.Package.LoginPomClass;
 
 public class Utility extends BaseClass {
 
@@ -42,4 +44,20 @@ public class Utility extends BaseClass {
 		
 	}
 
+	public static void LogInCOde() {
+		
+		SoftAssert assert1 = new SoftAssert();
+		LoginPomClass loginpomclass = new LoginPomClass();
+		String username = loginpomclass.getUName();
+		String password = loginpomclass.getPassword();
+
+		assert1.assertEquals(username, "Admin");
+		assert1.assertEquals(password, "admin123");
+		
+		loginpomclass.setUserName(username);
+		loginpomclass.setPassword(password);
+		loginpomclass.clickLogin();
+		assert1.assertAll();
+	}
+	
 }

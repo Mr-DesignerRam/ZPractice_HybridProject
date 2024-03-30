@@ -2,6 +2,7 @@ package com.TestClass.Package;
 
 import java.io.IOException;
 
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -35,23 +36,32 @@ public class LoginModulTest extends BaseClass {
 
 	@Test
 	public void LoginTest() throws IOException {
-		SoftAssert assert1 = new SoftAssert();
 		
-		LoginPomClass loginpomclass = new LoginPomClass();
-		String username = loginpomclass.getUName();
-		String password = loginpomclass.getPassword();
-
-		assert1.assertEquals(username, "Admin");
-		assert1.assertEquals(password, "admin123");
+		Utility.LogInCOde();
 		
-		loginpomclass.setUserName(username);
-		loginpomclass.setPassword(password);
-		loginpomclass.clickLogin();
-
 		
 		Utility.implicitWait(10);
 
 		Utility.takeScreenshot("LoginModule");
-		assert1.assertAll();
+		
+		
+		
+		
+//		SoftAssert assert1 = new SoftAssert();
+//		LoginPomClass loginpomclass = new LoginPomClass();
+//		String username = loginpomclass.getUName();
+//		String password = loginpomclass.getPassword();
+//
+//		assert1.assertEquals(username, "Admin");
+//		assert1.assertEquals(password, "admin123");
+//		
+//		loginpomclass.setUserName(username);
+//		loginpomclass.setPassword(password);
+//		loginpomclass.clickLogin();
+//		Utility.implicitWait(10);
+//
+//		Utility.takeScreenshot("LoginModule");
+//		
+//		assert1.assertAll();
 	}
 }
