@@ -15,7 +15,7 @@ import com.Util.Package.Utility;
 public class PIMModuleTest extends BaseClass {
 	@BeforeClass
 	public void setup() {
-		BaseClass.launchWebsite();
+		//BaseClass.launchWebsite();
 	}
 
 	@AfterClass
@@ -23,18 +23,14 @@ public class PIMModuleTest extends BaseClass {
 //	driver.close();
 	}
 
-@Test
-	public void PIMModuleTest() throws IOException {
+@Test(groups = {"addClick"},dependsOnGroups = {"Login"})
+	public void PIMModuleTest1() throws IOException {
 	
-		SoftAssert assert1 = new SoftAssert();
-		LoginPomClass loginpomclass = new LoginPomClass();
 
-		loginpomclass.setUserName( loginpomclass.getUName());
-		loginpomclass.setPassword(loginpomclass.getPassword());
-
-		PIMModulePOM PIMmodulepom = loginpomclass.clickLogin();
+		PIMModulePOM PIMmodulepom =new  PIMModulePOM();
 		PIMmodulepom.clickPIMModule();
 
 		PIMmodulepom.clickAdd();
 }
+
 }

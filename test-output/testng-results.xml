@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-30T07:26:52 IST" name="Default suite" finished-at="2024-03-30T07:27:24 IST" duration-ms="31240">
+  <suite started-at="2024-04-01T10:33:02 IST" name="Default suite" finished-at="2024-04-01T10:33:24 IST" duration-ms="21417">
     <groups>
+      <group name="Login">
+        <method signature="LoginModulTest.LoginTest()[pri:0, instance:com.TestClass.Package.LoginModulTest@428640fa]" name="LoginTest" class="com.TestClass.Package.LoginModulTest"/>
+      </group> <!-- Login -->
+      <group name="addClick">
+        <method signature="PIMModuleTest.PIMModuleTest1()[pri:0, instance:com.TestClass.Package.PIMModuleTest@4b8ee4de]" name="PIMModuleTest1" class="com.TestClass.Package.PIMModuleTest"/>
+      </group> <!-- addClick -->
     </groups>
-    <test started-at="2024-03-30T07:26:52 IST" name="Default test" finished-at="2024-03-30T07:27:24 IST" duration-ms="31240">
-      <class name="com.TestClass.Package.AddPIMSubModTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.TestClass.Package.AddPIMSubModTest@23c30a20]" started-at="2024-03-30T07:26:52 IST" name="setup" finished-at="2024-03-30T07:27:12 IST" duration-ms="19982" status="PASS">
+    <test started-at="2024-04-01T10:33:02 IST" name="Default test" finished-at="2024-04-01T10:33:24 IST" duration-ms="21417">
+      <class name="com.TestClass.Package.PIMModuleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.TestClass.Package.PIMModuleTest@4b8ee4de]" started-at="2024-04-01T10:33:16 IST" name="setup" finished-at="2024-04-01T10:33:16 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="PIMSubModTest()[pri:0, instance:com.TestClass.Package.AddPIMSubModTest@23c30a20]" started-at="2024-03-30T07:27:12 IST" name="PIMSubModTest" finished-at="2024-03-30T07:27:24 IST" duration-ms="11175" status="PASS">
+        <test-method signature="PIMModuleTest1()[pri:0, instance:com.TestClass.Package.PIMModuleTest@4b8ee4de]" started-at="2024-04-01T10:33:16 IST" name="PIMModuleTest1" depends-on-groups="Login" finished-at="2024-04-01T10:33:22 IST" duration-ms="5696" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PIMSubModTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestClass.Package.AddPIMSubModTest@23c30a20]" started-at="2024-03-30T07:27:24 IST" name="teardown" finished-at="2024-03-30T07:27:24 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- PIMModuleTest1 -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestClass.Package.PIMModuleTest@4b8ee4de]" started-at="2024-04-01T10:33:22 IST" name="teardown" finished-at="2024-04-01T10:33:22 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
+      </class> <!-- com.TestClass.Package.PIMModuleTest -->
+      <class name="com.TestClass.Package.LoginModulTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.TestClass.Package.LoginModulTest@428640fa]" started-at="2024-04-01T10:33:02 IST" name="setup" finished-at="2024-04-01T10:33:15 IST" duration-ms="12414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="LoginTest()[pri:0, instance:com.TestClass.Package.LoginModulTest@428640fa]" started-at="2024-04-01T10:33:15 IST" name="LoginTest" finished-at="2024-04-01T10:33:16 IST" duration-ms="1253" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LoginTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.TestClass.Package.LoginModulTest@428640fa]" started-at="2024-04-01T10:33:16 IST" name="teardown" finished-at="2024-04-01T10:33:16 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.TestClass.Package.LoginModulTest -->
+      <class name="com.TestClass.Package.AddPIMSubModTest">
+        <test-method signature="PIMSubModTest()[pri:0, instance:com.TestClass.Package.AddPIMSubModTest@d9345cd]" started-at="2024-04-01T10:33:22 IST" name="PIMSubModTest" depends-on-groups="addClick" finished-at="2024-04-01T10:33:24 IST" duration-ms="1956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- PIMSubModTest -->
       </class> <!-- com.TestClass.Package.AddPIMSubModTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

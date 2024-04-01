@@ -69,8 +69,9 @@ public class AddPIMSubModulePOM extends BaseClass {
 		Utility.setText(lastName, data2);
 
 		Utility.implicitWait(5);
+		saveButton.click();
 
-		AddPIMSubModulePOM apm = new AddPIMSubModulePOM();
+		//AddPIMSubModulePOM apm = new AddPIMSubModulePOM();
 //		apm.clearempId();
 
 		Utility.implicitWait(3);

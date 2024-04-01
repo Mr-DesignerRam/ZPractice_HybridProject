@@ -15,35 +15,14 @@ import com.Util.Package.Utility;
 
 public class AddPIMSubModTest {
 
-	
-	@BeforeClass
-	public void setup() {
-		BaseClass.launchWebsite();
-	}
 
-	@AfterClass
-	public void teardown() {
-//	driver.close();
-	}
-
-	@Test
+	@Test(dependsOnGroups = {"addClick"})
 	public void PIMSubModTest() throws IOException {
-		
-		// Ha code Multiple time use krav lagel tya sathi kai krav
-		
-		
-//		SoftAssert assert1 = new SoftAssert();
-		LoginPomClass loginpomclass = new LoginPomClass();
-
-		loginpomclass.setUserName( loginpomclass.getUName());
-		loginpomclass.setPassword(loginpomclass.getPassword());
-
-		PIMModulePOM PIMmodulepom = loginpomclass.clickLogin();
-		PIMmodulepom.clickPIMModule();
-
-		AddPIMSubModulePOM addPIM = PIMmodulepom.clickAdd();
+	
+		AddPIMSubModulePOM addPIM = new AddPIMSubModulePOM();
 		addPIM.first_Name();
 		
+		Utility.implicitWait(15);
 		Utility.takeScreenshot("AllData");
 		
 		

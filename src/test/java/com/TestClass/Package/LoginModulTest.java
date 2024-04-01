@@ -34,34 +34,10 @@ public class LoginModulTest extends BaseClass {
 
 	}
 
-	@Test
+	@Test(groups = {"Login"})
 	public void LoginTest() throws IOException {
 		
 		Utility.LogInCOde();
-		
-		
-		Utility.implicitWait(10);
-
-		Utility.takeScreenshot("LoginModule");
-		
-		
-		
-		
-//		SoftAssert assert1 = new SoftAssert();
-//		LoginPomClass loginpomclass = new LoginPomClass();
-//		String username = loginpomclass.getUName();
-//		String password = loginpomclass.getPassword();
-//
-//		assert1.assertEquals(username, "Admin");
-//		assert1.assertEquals(password, "admin123");
-//		
-//		loginpomclass.setUserName(username);
-//		loginpomclass.setPassword(password);
-//		loginpomclass.clickLogin();
-//		Utility.implicitWait(10);
-//
-//		Utility.takeScreenshot("LoginModule");
-//		
-//		assert1.assertAll();
+	
 	}
 }
