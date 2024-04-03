@@ -1,31 +1,27 @@
 package com.TestClass.Package;
 
+import java.awt.AWTException;
 import java.io.IOException;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+import org.apache.poi.EncryptedDocumentException;
 
-import com.BaseClass.Package.BaseClass;
+import org.testng.annotations.Test;
+
 import com.POMClass.Package.AddPIMSubModulePOM;
-import com.POMClass.Package.LoginPomClass;
-import com.POMClass.Package.PIMModulePOM;
+
 import com.Util.Package.Utility;
 
 public class AddPIMSubModTest {
 
+	@Test(dependsOnGroups = { "addClick" })
+	public void PIMSubModTest() throws IOException, EncryptedDocumentException, AWTException {
 
-	@Test(dependsOnGroups = {"addClick"})
-	public void PIMSubModTest() throws IOException {
-	
 		AddPIMSubModulePOM addPIM = new AddPIMSubModulePOM();
-		addPIM.first_Name();
-		
+	//	addPIM.first_Name();
+
 		Utility.implicitWait(15);
 		Utility.takeScreenshot("AllData");
-		
-		
+
 	}
-	
+
 }

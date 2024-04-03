@@ -17,6 +17,7 @@ public class BaseClass {
 		
 		driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+//		driver.get("https://www.facebook.com/");
 //		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		

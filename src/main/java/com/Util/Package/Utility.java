@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 
 import com.BaseClass.Package.BaseClass;
@@ -16,7 +17,7 @@ import com.POMClass.Package.LoginPomClass;
 
 public class Utility extends BaseClass {
 
-	
+	static Actions act;
 	
 	public static void setText(WebElement ele, String str) {
 		ele.sendKeys(str);
@@ -58,6 +59,10 @@ public class Utility extends BaseClass {
 		loginpomclass.setPassword(password);
 		loginpomclass.clickLogin();
 		assert1.assertAll();
+	}
+	
+	public static void actionClass() {
+		 act = new Actions(driver);
 	}
 	
 }
