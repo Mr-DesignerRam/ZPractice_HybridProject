@@ -88,7 +88,7 @@ public class UserAllData extends BaseClass {
 		PIMmodulepom.clickPIMModule();
 
 		PIMmodulepom.clickAdd();
-		System.out.println();
+		
 		
 //		System.out.println(data);
 	}
