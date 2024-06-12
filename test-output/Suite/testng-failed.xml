@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="firefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.TestClass.Package.PIMModuleTest">
+        <methods>
+          <include name="attachScreenShot"/>
+          <include name="PIMModuleTest1"/>
+        </methods>
+      </class> <!-- com.TestClass.Package.PIMModuleTest -->
+      <class name="com.TestClass.Package.UserAllData">
+        <methods>
+          <include name="attachScreenShot"/>
+          <include name="setData" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.TestClass.Package.UserAllData -->
+      <class name="com.TestClass.Package.LoginModulTest">
+        <methods>
+          <include name="attachScreenshot"/>
+          <include name="teardown"/>
+          <include name="LoginTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.TestClass.Package.LoginModulTest -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

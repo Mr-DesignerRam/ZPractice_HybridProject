@@ -30,6 +30,16 @@ public class MyListener implements ITestListener {
 			e.printStackTrace();
 		}
 	}
+	
+	@Override
+	public void onTestSkipped(ITestResult result) {
+		try {
+			Utility.takeScreenshot(result.getMethod().getMethodName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	  }
 
 	@Override
 	public void onStart(ITestContext context) {

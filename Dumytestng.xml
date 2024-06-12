@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="DummyRegSuite">
+  <test thread-count="5" name="Test">
+    <classes>
+      
+      <groups>
+		  <run>
+			  <include name="Regression"></include>
+		  </run>
+	  </groups>
+	  
+	  
+	  
+      <class name="com.TestClass.Package.DummyListernerTest"/>   
+   
+       </classes>
+  </test> <!-- Test -->
+</suite> <!-- DummyRegSuite -->

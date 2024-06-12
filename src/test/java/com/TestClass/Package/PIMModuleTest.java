@@ -2,7 +2,9 @@ package com.TestClass.Package;
 
 import java.io.IOException;
 
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
@@ -20,25 +22,19 @@ import com.aventstack.extentreports.Status;
 
 @Listeners(MyListener.class)
 public class PIMModuleTest extends BaseClass {
-	@BeforeClass
-	public void setup() {
-		// BaseClass.launchWebsite();
+
+
+	@AfterMethod
+	public void attachScreenShot(ITestResult result) {
+		
+		ExtentReportUtility.logger.addScreenCaptureFromPath(projectPath+"\\ScreenShot\\"+result.getName()+".png", result.getName());
+		
+		if(result.getStatus()==result.FAILURE) {
+			ExtentReportUtility.logger.log(Status.FAIL,"Test case is Failed "+result.getName());
+			ExtentReportUtility.logger.log(Status.FAIL,"Test case is Failed "+result.getThrowable());
+		}
 	}
 
-	@AfterClass
-	public void teardown() {
-//	driver.close();
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		ExtentReportUtility.initExtentReports();
-	}
-
-	@AfterTest
-	public void afterTest() {
-		ExtentReportUtility.generateReport();
-	}
 
 	@Test(groups = { "addClick" }, dependsOnGroups = { "Login" })
 	public void PIMModuleTest1() throws IOException {

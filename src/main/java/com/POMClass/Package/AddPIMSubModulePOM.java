@@ -42,7 +42,20 @@ public class AddPIMSubModulePOM extends BaseClass {
 	@FindBy(xpath = "(//input[@class=\"oxd-input oxd-input--active\"])[2]")
 	private WebElement emp_Id;
 
-	// save
+	// Create Login Click 
+	@FindBy(xpath="//span[@class='oxd-switch-input oxd-switch-input--active --label-right']")
+	private WebElement createLoginBtn;
+	
+	@FindBy(xpath="(//input[@autocomplete='off'])[1]")
+	private WebElement usernameCreate;
+	
+	@FindBy(xpath="(//input[@autocomplete='off'])[2]")
+	private WebElement passwordUser;
+
+	@FindBy(xpath="(//input[@autocomplete='off'])[3]")
+	private WebElement confirmpasswordUser;
+	
+		// save
 	@FindBy(xpath = "//button[text()=' Save ']")
 	private WebElement saveButton;
 
@@ -70,6 +83,25 @@ public class AddPIMSubModulePOM extends BaseClass {
 		act.click(emp_Id).keyDown(Keys.CONTROL).sendKeys(Keys.chord("a")).keyUp(Keys.CONTROL).sendKeys(str)
 		.build().perform();
 		
+	}
+	
+	public void createLoginClick() {
+		Utility.userClick(createLoginBtn);
+		Utility.elementVisibleWait(usernameCreate,5);
+	}
+	
+	
+	public void valueOfUserName(String str) {
+		
+		Utility.setText(usernameCreate, str);
+	}
+	
+	public void valueOfPassword(String str) {
+		Utility.setText(passwordUser, str);
+	}
+	
+	public void valueConfirmPassword(String str) {
+		Utility.setText(confirmpasswordUser, str);
 	}
 	
 	public void saveButtonClick() {

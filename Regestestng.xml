@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Regression Suite">
+  <test thread-count="5" name="Test">
+
+<groups>
+	<run>
+		<include name="Regression"></include>
+		
+	</run>
+</groups>
+    <classes>
+      <class name="com.TestClass.Package.DummyListernerTest"/>
+
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Regression Suite -->
